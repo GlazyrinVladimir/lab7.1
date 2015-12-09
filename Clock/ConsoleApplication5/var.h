@@ -3,19 +3,20 @@
 
 using namespace sf;
 
-const float quadrant = 90.0;
-const float second = 6.0;
-const float half_second = 3.0;
-const float third_quadrant = 30.0;
-const float radius = 200.0;
-int coord_x, coord_y;
+static const float QUADRANT = 90.0;
+static const float SECOND = 6.0;
+static const float RADIUS = 200.0;
+static const int AMOUNT_OF_DOTS = 60;
+//int coord_x, coord_y;
+//const Vector2f COORDINATES = { COORD_X, COORD_Y };
+Vector2f coordinateDots[AMOUNT_OF_DOTS];
 
 struct init_shapes {
-	RectangleShape arrowS;
-	RectangleShape arrowM;
-	RectangleShape arrowH;
-	RectangleShape s_dot;
-	RectangleShape h_dot;
+	RectangleShape secondArrow;
+	RectangleShape minuteArrow;
+	RectangleShape hourArrow;
+	RectangleShape dot;
+
 	RectangleShape middle_dot;
 };
 init_shapes shape;
